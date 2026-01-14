@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Арт мой брат, Азер - Мы гоним быстро</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Фирменный темный градиент Listhaten */
             background: radial-gradient(circle at center, #1e0b35 0%, #07030a 100%);
             color: #ffffff;
+            /* Основной шрифт - системный, для заголовков - Dela Gothic One */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             display: flex;
@@ -36,7 +37,6 @@
             height: 100%;
             border-radius: 45px;
             object-fit: cover;
-            /* Мягкое фиолетовое свечение */
             box-shadow: 0 15px 60px rgba(138, 43, 226, 0.4); 
             position: relative;
             z-index: 2;
@@ -56,6 +56,8 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             z-index: 3;
+            /* Чтобы даже на кнопке был нужный вайб */
+            font-family: 'Dela Gothic One', cursive;
         }
 
         .info-section {
@@ -63,12 +65,12 @@
         }
 
         h1 {
-            font-size: 36px;
-            font-weight: 900;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 32px; /* Чуть уменьшил, так как шрифт очень широкий */
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: -1.5px;
-            line-height: 1;
+            line-height: 1.2;
+            word-spacing: 5px;
         }
 
         .sub-text {
@@ -76,7 +78,7 @@
             color: #777;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-top: 12px;
+            margin-top: 15px;
             font-weight: 600;
         }
 
