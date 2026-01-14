@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LH RECORDS | Азер</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .cover-art {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            margin: 0 auto 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 4px; /* Listhaten любит прямые или слегка скругленные углы */
+            background-image: url('https://via.placeholder.com/200'); /* Сюда прямую ссылку на обложку */
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .artist-name {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .quote-box {
+            font-size: 13px;
+            color: #888;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+            background-color: #f9f9f9;
+            text-decoration: none;
+            color: #111;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+        }
+
+        .link-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .link-item span:last-child {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 10px;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="cover-art"></div>
+        
+        <h1>Мы гоним быстро</h1>
+        <div class="artist-name">Азер (Cover)</div>
+
+        <div class="quote-box">
+            «Хорошо, даже лучше чем оригинал... кайф»<br>
+            <strong>— Арт мой Брат</strong>
+        </div>
+
+        <div class="links-container">
+            <a href="https://soundcloud.com/azerslow/azerone1" class="link-card link-item" target="_blank">
+                <span>SoundCloud</span>
+                <span>Listen</span>
+            </a>
+
+            <a href="https://youtu.be/jFa93X1mraA?si=wowmDXxk5Ek6WV1w" class="link-card link-item" target="_blank">
+                <span>YouTube</span>
+                <span>Watch</span>
+            </a>
+        </div>
+
+        <div class="footer">LH RECORDS</div>
+    </div>
+
+</body>
+</html>
