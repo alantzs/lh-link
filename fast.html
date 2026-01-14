@@ -3,127 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Арт мой брат, Азер - Мы гоним быстро (кавер)</title>
+    <title>Арт мой брат, Азер - Мы гоним быстро (Кавер)</title>
     <style>
         body {
-            background-color: #ffffff;
-            color: #111111;
+            background: radial-gradient(circle at center, #250a30 0%, #0a0510 100%);
+            color: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .wrapper {
-            max-width: 480px;
+            max-width: 400px;
             width: 90%;
             text-align: center;
             padding: 40px 0;
         }
 
+        .cover-container {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 40px;
+        }
+
         .cover-art {
-            width: 200px;
-            height: 200px;
-            background-color: #f0f0f0;
-            margin: 0 auto 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-radius: 4px; /* Listhaten любит прямые или слегка скругленные углы */
-            background-image: url('https://via.placeholder.com/200'); /* Сюда прямую ссылку на обложку */
-            background-size: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            object-fit: cover;
+            box-shadow: 0 10px 50px rgba(160, 32, 240, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .out-now {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            color: black;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 3;
+        }
+
+        .title-section {
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: -1px;
         }
 
-        .artist-name {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-
-        .quote-box {
-            font-size: 13px;
-            color: #888;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-            margin-bottom: 35px;
-            line-height: 1.6;
+        .label-name {
+            font-size: 10px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 5px;
+            font-weight: 300;
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
         }
 
         .link-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 25px;
-            background-color: #f9f9f9;
+            padding: 20px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             text-decoration: none;
-            color: #111;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: background 0.2s ease;
+            color: #fff;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
         }
 
         .link-item:hover {
-            background-color: #f0f0f0;
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
         }
 
-        .link-item span:last-child {
-            font-size: 12px;
+        .platform-name {
+            font-size: 13px;
+            font-weight: 700;
             text-transform: uppercase;
+        }
+
+        .action-text {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #888;
             letter-spacing: 1px;
-            color: #999;
-        }
-
-        .footer {
-            margin-top: 50px;
-            font-size: 10px;
-            color: #bbb;
-            text-transform: uppercase;
-            letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
-        <div class="cover-art"></div>
+        <div class="cover-container">
+            <img src="photo_2026-01-14_18-41-00.jpg" alt="Cover" class="cover-art">
+            <div class="out-now">Out Now</div>
+        </div>
         
-        <h1>Мы гоним быстро</h1>
-        <div class="artist-name">Арт Мой Брат, Азер (Cover)</div>
-
-        <div class="quote-box">
-            »<br>
-            <strong>—</strong>
+        <div class="title-section">
+            <h1>Мы гоним быстро</h1>
+            <div class="label-name">Арт мой брат, Азер | LH RECORDS </div>
         </div>
 
         <div class="links-container">
-            <a href="https://soundcloud.com/azerslow/azerone1" class="link-card link-item" target="_blank">
-                <span>SoundCloud</span>
-                <span>Listen</span>
+            <a href="https://soundcloud.com/azerslow/azerone1" class="link-item" target="_blank">
+                <span class="platform-name">SoundCloud</span>
+                <span class="action-text">Слушать</span>
             </a>
 
-            <a href="https://youtu.be/jFa93X1mraA?si=wowmDXxk5Ek6WV1w" class="link-card link-item" target="_blank">
-                <span>YouTube</span>
-                <span>Watch</span>
+            <a href="https://youtu.be/jFa93X1mraA?si=wowmDXxk5Ek6WV1w" class="link-item" target="_blank">
+                <span class="platform-name">YouTube</span>
+                <span class="action-text">Смотреть</span>
             </a>
         </div>
-
-        <div class="footer">LH RECORDS</div>
     </div>
 
 </body>
