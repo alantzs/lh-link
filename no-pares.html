@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AzerSlow, WBREG999 - NO PARES | LH RECORDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #39FF14; --bg: #080808; }
+        
+        body {
+            background-color: var(--bg);
+            /* Фон - твоя обложка с сильным блюром */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('NO PARES - Cover.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .content { width: 100%; max-width: 380px; text-align: center; }
+
+        .cover {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 16px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.9), 0 0 20px rgba(57, 255, 20, 0.1);
+            margin-bottom: 25px;
+            object-fit: cover;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        h1 { font-size: 26px; font-weight: 900; margin: 0 0 5px 0; letter-spacing: 1px; text-transform: uppercase; }
+        .artists { font-size: 14px; color: #aaa; margin-bottom: 35px; letter-spacing: 2px; font-weight: 400; }
+
+        /* Контейнер со ссылками на музыку */
+        .links-container { 
+            background: rgba(255,255,255,0.03); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.08); 
+        }
+
+        .link-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+        .link-row:last-child { border-bottom: none; }
+        .link-row:hover { background: rgba(57, 255, 20, 0.08); }
+
+        .platform-name { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .play-btn {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 7px 18px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+        .link-row:hover .play-btn { background: var(--accent); color: #000; }
+
+        /* Секция скриптов */
+        .script-section { margin-top: 40px; width: 100%; }
+        .section-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; font-weight: 900; }
+
+        .script-btn {
+            width: 100%;
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+        .script-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255,255,255,0.1); }
+        .script-btn.copied { background: var(--accent); color: #000; }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <img src="NO PARES - Cover.jpg" class="cover" alt="NO PARES">
+        
+        <h1>NO PARES</h1>
+        <div class="artists">AzerSlow, WBREG999</div>
+
+        <div class="links-container">
+            <a href="https://music.yandex.ru/album/40193187" target="_blank" class="link-row">
+                <span class="platform-name">Yandex Music</span>
+                <span class="play-btn">Listen</span>
+            </a>
+            <a href="https://music.apple.com/us/album/no-pares-single/1868820212" target="_blank" class="link-row">
+                <span class="platform-name">Apple Music</span>
+                <span class="play-btn">Listen</span>
+            </a>
+            <a href="https://music.vk.com/link/R19Zb" target="_blank" class="link-row">
+                <span class="platform-name">VK Music</span>
+                <span class="play-btn">Listen</span>
+            </a>
+            <a href="https://music.mts.ru/album/40193187" target="_blank" class="link-row">
+                <span class="platform-name">MTS Music</span>
+                <span class="play-btn">Listen</span>
+            </a>
+        </div>
+
+        <div class="script-section">
+            <div class="section-label">Roblox Scripts</div>
+            <button class="script-btn" onclick="copyScript(this, 'https://raw.githubusercontent.com/alantzs/flygui/main/fly.lua')">Copy LH FLY V2</button>
+            <button class="script-btn" onclick="copyScript(this, 'https://raw.githubusercontent.com/alantzs/speedhub/main/speed.lua')">Copy LH SPEED HUB</button>
+        </div>
+    </div>
+
+    <script>
+        function copyScript(btn, url) {
+            const code = `loadstring(game:HttpGet("${url}"))()`;
+            const el = document.createElement('textarea');
+            el.value = code;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const oldText = btn.innerText;
+            btn.innerText = "COPIED TO CLIPBOARD!";
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.innerText = oldText;
+                btn.classList.remove('copied');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
