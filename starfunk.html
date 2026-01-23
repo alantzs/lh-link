@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listhaten | STAR FUNK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #05000a; /* Почти черный фиолетовый */
+            --purple-main: #4b0082; /* Индиго/Фиолетовый */
+            --purple-neon: #8a2be2; /* Яркий акцент */
+            --card-bg: rgba(20, 0, 40, 0.6);
+            --white: #ffffff;
+            --font-main: 'Dela Gothic One', cursive;
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            background: radial-gradient(circle at top, #1a0033 0%, var(--bg-deep) 100%);
+            color: var(--white);
+            font-family: var(--font-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .lh-container {
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Обложка с фиолетовым неоном */
+        .cover-wrap {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .cover-wrap::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            background: var(--purple-neon);
+            filter: blur(20px);
+            opacity: 0.3;
+            z-index: -1;
+            border-radius: 15px;
+        }
+
+        .cover-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: url('https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/29/66/de/2966debe-fcb0-8ee8-aced-683996d08db6/7306332872074.jpg/600x600bb.jpg') center/cover;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .header-text h1 {
+            font-size: 1.7rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+        }
+
+        .header-text p {
+            color: var(--purple-neon);
+            font-size: 0.85rem;
+            margin: 8px 0 35px;
+            letter-spacing: 1px;
+        }
+
+        /* Кнопки сервисов */
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .platform-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: var(--white);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .platform-card:hover {
+            background: rgba(138, 43, 226, 0.15);
+            border-color: var(--purple-neon);
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+        }
+
+        .platform-name {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .btn-action {
+            font-size: 0.65rem;
+            background: var(--purple-neon);
+            color: white;
+            padding: 7px 18px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+            text-transform: uppercase;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 4px;
+        }
+
+        .footer b { color: var(--purple-neon); }
+    </style>
+</head>
+<body>
+
+<div class="lh-container">
+    <div class="cover-wrap">
+        <div class="cover-img"></div>
+    </div>
+
+    <div class="header-text">
+        <h1>STAR FUNK</h1>
+        <p>Азер, $onik play</p>
+    </div>
+
+    <div class="links-grid">
+        <a href="https://music.apple.com/us/album/1870383112?mt=1&at=1000lqjf&ct=bq&app=music" target="_blank" class="platform-card">
+            <span class="platform-name">Apple Music</span>
+            <span class="btn-action">Слушать</span>
+        </a>
+        
+        <a href="https://music.vk.com/link/zkhUF" target="_blank" class="platform-card">
+            <span class="platform-name">VK Music</span>
+            <span class="btn-action">Слушать</span>
+        </a>
+
+        <a href="https://music.yandex.ru/album/40289930" target="_blank" class="platform-card">
+            <span class="platform-name">Yandex Music</span>
+            <span class="btn-action">Слушать</span>
+        </a>
+
+        <a href="https://music.mts.ru/album/40289930" target="_blank" class="platform-card">
+            <span class="platform-name">МТС Музыка</span>
+            <span class="btn-action">Слушать</span>
+        </a>
+
+        <a href="https://www.deezer.com/album/900804112" target="_blank" class="platform-card">
+            <span class="platform-name">Deezer</span>
+            <span class="btn-action">Слушать</span>
+        </a>
+    </div>
+
+    <div class="footer">
+        LH LINK BY <b>Listhaten</b>
+    </div>
+</div>
+
+</body>
+</html>
