@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KLOVER | LH LINK</title>
+    <title>KLOVER - site by LH LINK</title>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,9 +11,11 @@
             --deep-purple: #1a0033;
             --bg: #05000a;
             --white: #ffffff;
+            --grey: #888888;
         }
 
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
         body {
             background-color: var(--bg);
             background: radial-gradient(circle at center, var(--deep-purple) 0%, var(--bg) 100%);
@@ -30,88 +32,123 @@
             width: 100%;
             max-width: 400px;
             text-align: center;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        /* Аватарка Кловера */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Аватарка Кловера с фиксом пути */
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             border: 4px solid var(--neon-purple);
-            box-shadow: 0 0 25px var(--neon-purple);
-            margin: 0 auto 20px;
-            background: url('https://i.postimg.cc/qvh0v5yN/channels4-profile.jpg') center/cover; /* Замени на прямой линк после загрузки */
-            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px var(--neon-purple);
+            margin: 0 auto 25px;
+            /* Пробуем относительный путь к корню репозитория */
+            background: url('../../channels4_profile.jpg') center/cover, url('https://i.postimg.cc/qvh0v5yN/channels4-profile.jpg') center/cover;
+            animation: pulse 2.5s infinite ease-in-out;
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 15px var(--neon-purple); }
-            50% { box-shadow: 0 0 35px var(--neon-purple); }
-            100% { box-shadow: 0 0 15px var(--neon-purple); }
+            0% { box-shadow: 0 0 15px var(--neon-purple); transform: scale(1); }
+            50% { box-shadow: 0 0 35px var(--neon-purple); transform: scale(1.02); }
+            100% { box-shadow: 0 0 15px var(--neon-purple); transform: scale(1); }
         }
 
-        h1 { font-size: 2rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
-        
-        /* БИО */
-        .bio {
-            background: rgba(240, 0, 255, 0.1);
-            border: 1px solid var(--neon-purple);
-            padding: 15px;
-            border-radius: 12px;
-            margin: 20px 0;
-            font-size: 0.75rem;
-            line-height: 1.6;
+        h1 { 
+            font-size: 2.2rem; 
+            margin: 0; 
+            letter-spacing: 3px; 
             text-transform: uppercase;
+            text-shadow: 0 0 10px var(--neon-purple);
         }
-
+        
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 25px;
+            gap: 12px;
+            margin: 25px 0;
         }
 
         .stat-box {
-            background: #000;
-            border: 1px solid #333;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 0.6rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(240, 0, 255, 0.2);
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
         }
 
-        .stat-box b { color: var(--neon-purple); display: block; font-size: 0.9rem; }
+        .stat-box b { 
+            color: var(--neon-purple); 
+            display: block; 
+            font-size: 1rem; 
+            margin-bottom: 4px;
+        }
 
-        /* Кнопки Соцсетей */
-        .social-links { display: flex; flex-direction: column; gap: 12px; }
+        .bio {
+            background: linear-gradient(90deg, rgba(240, 0, 255, 0.1), rgba(0, 0, 0, 0));
+            border-left: 4px solid var(--neon-purple);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        /* Соцсети */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
         .s-link {
-            background: #000;
+            background: transparent;
             border: 2px solid var(--white);
             color: var(--white);
             text-decoration: none;
             padding: 18px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            transition: 0.3s;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            text-transform: uppercase;
         }
 
         .s-link:hover {
-            background: var(--neon-purple);
+            background: var(--white);
+            color: var(--bg);
+            transform: scale(1.02);
+        }
+
+        .s-link.special {
             border-color: var(--neon-purple);
-            color: black;
-            transform: scale(1.05);
+            color: var(--neon-purple);
+        }
+
+        .s-link.special:hover {
+            background: var(--neon-purple);
+            color: white;
         }
 
         .footer {
-            margin-top: 40px;
-            font-size: 0.5rem;
-            color: #555;
-            letter-spacing: 2px;
+            margin-top: 50px;
+            font-size: 0.6rem;
+            color: var(--grey);
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
+        
+        .footer b { color: var(--neon-purple); }
     </style>
 </head>
 <body>
@@ -121,23 +158,23 @@
     <h1>KLOVER</h1>
     
     <div class="stats-grid">
-        <div class="stat-box"><b>3K+</b> Подписчиков в Likee</div>
-        <div class="stat-box"><b>69</b> Подписчиков</div>
+        <div class="stat-box"><b>3K+</b> Likee Subs</div>
+        <div class="stat-box"><b>69</b> YT Subs</div>
     </div>
 
     <div class="bio">
-        10 ЛЕТ / БЛОГЕР<br>
-        РОБЛОКСЕР / МАЙНКРАФТЕР
+        10 лет • Блогер<br>
+        Robloxer • Майнкрафтер
     </div>
 
     <div class="social-links">
-        <a href="https://t.me/nometa_plzz" target="_blank" class="s-link">TELEGRAM</a>
-        <a href="https://youtube.com/@KLVR_by" target="_blank" class="s-link">YOUTUBE</a>
-        <a href="https://likee.video/@statfice" target="_blank" class="s-link">LIKEE</a>
+        <a href="https://t.me/nometa_plzz" target="_blank" class="s-link special">Telegram</a>
+        <a href="https://youtube.com/@KLVR_by" target="_blank" class="s-link">YouTube</a>
+        <a href="https://likee.video/@statfice" target="_blank" class="s-link">Likee</a>
     </div>
 
     <div class="footer">
-        LH LINK BY LISTHATEN | SITE: KLOVER
+        LH LINK BY <b>Listhaten</b>
     </div>
 </div>
 
