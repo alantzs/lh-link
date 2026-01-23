@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLOVER | LH LINK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #f000ff;
+            --deep-purple: #1a0033;
+            --bg: #05000a;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            background: radial-gradient(circle at center, var(--deep-purple) 0%, var(--bg) 100%);
+            color: var(--white);
+            font-family: 'Dela Gothic One', cursive;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .klover-card {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Аватарка Кловера */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--neon-purple);
+            box-shadow: 0 0 25px var(--neon-purple);
+            margin: 0 auto 20px;
+            background: url('https://i.postimg.cc/qvh0v5yN/channels4-profile.jpg') center/cover; /* Замени на прямой линк после загрузки */
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px var(--neon-purple); }
+            50% { box-shadow: 0 0 35px var(--neon-purple); }
+            100% { box-shadow: 0 0 15px var(--neon-purple); }
+        }
+
+        h1 { font-size: 2rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
+        
+        /* БИО */
+        .bio {
+            background: rgba(240, 0, 255, 0.1);
+            border: 1px solid var(--neon-purple);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 0.75rem;
+            line-height: 1.6;
+            text-transform: uppercase;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .stat-box {
+            background: #000;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.6rem;
+        }
+
+        .stat-box b { color: var(--neon-purple); display: block; font-size: 0.9rem; }
+
+        /* Кнопки Соцсетей */
+        .social-links { display: flex; flex-direction: column; gap: 12px; }
+
+        .s-link {
+            background: #000;
+            border: 2px solid var(--white);
+            color: var(--white);
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .s-link:hover {
+            background: var(--neon-purple);
+            border-color: var(--neon-purple);
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.5rem;
+            color: #555;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="klover-card">
+    <div class="profile-img"></div>
+    <h1>KLOVER</h1>
+    
+    <div class="stats-grid">
+        <div class="stat-box"><b>3K+</b> Подписчиков в Likee</div>
+        <div class="stat-box"><b>69</b> Подписчиков</div>
+    </div>
+
+    <div class="bio">
+        10 ЛЕТ / БЛОГЕР<br>
+        РОБЛОКСЕР / МАЙНКРАФТЕР
+    </div>
+
+    <div class="social-links">
+        <a href="https://t.me/nometa_plzz" target="_blank" class="s-link">TELEGRAM</a>
+        <a href="https://youtube.com/@KLVR_by" target="_blank" class="s-link">YOUTUBE</a>
+        <a href="https://likee.video/@statfice" target="_blank" class="s-link">LIKEE</a>
+    </div>
+
+    <div class="footer">
+        LH LINK BY LISTHATEN | SITE: KLOVER
+    </div>
+</div>
+
+</body>
+</html>
