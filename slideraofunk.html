@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLIDERAO FUNK - REPOSIK BGM</title>
+    <title>LH LINK | SLIDERAO FUNK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             background: #000;
             color: #fff;
-            font-family: 'Arial Black', sans-serif;
+            font-family: 'Dela Gothic One', cursive; /* Только этот шрифт */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,8 +33,8 @@
             object-fit: cover;
         }
 
-        h1 { font-size: 32px; margin: 0; text-transform: uppercase; }
-        .artist { font-size: 18px; color: #888; margin-bottom: 30px; letter-spacing: 2px; }
+        h1 { font-size: 28px; margin: 0; text-transform: uppercase; }
+        .artist { font-size: 16px; color: #888; margin-bottom: 30px; }
 
         .links-list {
             background: rgba(255,255,255,0.05);
@@ -56,7 +57,7 @@
         .row:hover { background: rgba(255,255,255,0.1); }
         .row:last-child { border-bottom: none; }
 
-        .platform { display: flex; align-items: center; gap: 15px; font-size: 16px; }
+        .platform { display: flex; align-items: center; gap: 15px; font-size: 14px; }
         .platform img { width: 28px; height: 28px; }
 
         .btn {
@@ -64,11 +65,11 @@
             color: #000;
             padding: 8px 18px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 900;
             text-transform: uppercase;
             cursor: pointer;
-            min-width: 100px;
+            min-width: 110px;
         }
 
         .btn.done {
@@ -80,10 +81,10 @@
 <body>
 
     <div class="container">
-        <img src="IMG_20260126_152932_355.jpg" class="cover" alt="SLIDERAO FUNK">
+        <img src="artist.jpg" class="cover" alt="SLIDERAO FUNK">
         
         <h1>SLIDERAO FUNK</h1>
-        <div class="artist">REPOSIK BGM</div>
+        <div class="artist">REPOSIK</div>
 
         <div class="links-list">
             <a href="https://authorize.music.apple.com/woa?a=eyJ0aGlyZFBhcnR5SWNvblVSTCI6Imh0dHBzOi8vYmFuZC5saW5rL2JhbmRsaW5rLWV4dGVybmFsLXBhZ2VzL2Fzc2V0cy9mYXZpY29ucy9hcHBsZS10b3VjaC1pY29uLnBuZyIsInRoaXJkUGFydHlOYW1lIjoiYmFuZC5saW5rIiwidGhpcmRQYXJ0eVRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKRlV6STFOaUlzSW10cFpDSTZJa0UzTWpWU04wZzJNMDRpZlEuZXlKcGMzTWlPaUkwTnpkRlFWUTNOMU16SWl3aWFXRjBJam94TnpZNU5ESTJOVGN6TENKbGVIQWlPakUzTmprMU1USTVPRE45LnNLbEpEalBTNVB5NGtHMmVKZ1dZaFdHMmdnbmNjS2Q2dmNEMkxjam5welpCSmF6aG1DRUNtRllEemJ5UC1qUVdVMm43LTEwazFtT3UyMlV3ZlNtRmNnIn0%3D&referrer=https%3A%2F%2Fband.link%2FSLideraofyynk&app=music&p=subscribe" 
@@ -113,13 +114,13 @@
                 <div class="btn">Пресейв</div>
             </a>
 
-            <a href="https://band.link/save-presave?type=vkmusic&bandlink_id=undefined&bandlink_hash=BYe2A&upc=7940768004243&redirectUrl=https://band.link/SLideraofyynk" 
+            <a href="https://soundcloud.com/reposik/slideraofunk" 
                class="row" target="_blank" onclick="mark(this)">
                 <div class="platform">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg">
-                    <span>VK Music</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Antu_soundcloud.svg">
+                    <span>SoundCloud</span>
                 </div>
-                <div class="btn">Пресейв</div>
+                <div class="btn">Listen</div>
             </a>
         </div>
     </div>
@@ -127,7 +128,6 @@
     <script>
         function mark(element) {
             const btn = element.querySelector('.btn');
-            // Небольшая задержка, чтобы юзер успел перейти по ссылке
             setTimeout(() => {
                 btn.innerText = "ПРЕСЕЙВЛЕНО";
                 btn.classList.add('done');
